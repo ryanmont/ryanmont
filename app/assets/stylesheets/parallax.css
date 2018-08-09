@@ -1,0 +1,121 @@
+/* parallax.css */
+
+
+
+body {
+  margin:  0px;
+  padding: 0px;
+
+}
+
+h1 {
+font-family: 'Permanent Marker', cursive;
+color: white;
+font-size:  40px;
+margin:  0px;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+
+}
+
+.mid {
+display: inline-block;
+height: 250px;
+width: 50%;
+margin: 13%;
+background-color: ghostwhite;
+border-radius: 8px;
+border: 3px solid lightgoldenrodyellow; 
+vertical-align: middle;
+padding: 35px;
+position:  absolute;
+z-index: 1;
+
+}
+
+
+#box1 {
+  height:  100vh;
+  width:  100%;
+  background-image:  url("https://images.pexels.com/photos/1562/italian-landscape-mountains-nature.jpg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size:  cover;
+  display: table;
+  background-attachment: fixed;
+
+}
+
+
+#box2 {
+  height:  100vh;
+  width:  100%;
+  background-image:  url("https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size:  cover;
+  display: table;
+  background-attachment: fixed;
+}
+
+
+#box3 {
+  height:  100vh;
+  width:  100%;
+  background-image:  url("https://images.pexels.com/photos/67517/pexels-photo-67517.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size:  cover;
+  display: table;
+  background-attachment: fixed;
+}
+
+
+#box4 {
+  height:  100vh;
+  width:  100%;
+  background-image:  url("https://images.pexels.com/photos/552785/pexels-photo-552785.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size:  cover;
+  display: table;
+  background-attachment: fixed;
+}
+
+
+#box5 {
+  height:  100vh;
+  width:  100%;
+  background-image:  url("https://images.pexels.com/photos/309198/pexels-photo-309198.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+  background-size:  cover;
+  display: table;
+  background-attachment: fixed;
+}
+
+
+#box1, #box2, #box3, #box4, #box5
+{
+opacity: 0.50;
+
+}
+
+
+#section
+{
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  padding: 50px  80px;
+  color: goldenrod;
+  background-color:ghostwhite ;
+  border:  1px solid grey;
+}
+
+
+#reactive
+
+{
+  margin-top: 18%;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  padding: 5px  70px;
+  color: #b6e0f4;
+  background-color:ghostwhite ;
+  border: solid 2px goldenrod;
+  position:  absolute;
+  z-index: 1;
+}
+
+
