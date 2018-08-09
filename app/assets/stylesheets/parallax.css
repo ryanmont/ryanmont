@@ -8,20 +8,21 @@ body {
 
 }
 
-h1 {
+.description {
 font-family: 'Permanent Marker', cursive;
-color: white;
+color: red;
 font-size:  40px;
 margin:  0px;
 text-align: center;
 display: table-cell;
 vertical-align: middle;
 
+
 }
 
 .mid {
 display: inline-block;
-height: 250px;
+height: auto;
 width: 50%;
 margin: 13%;
 background-color: ghostwhite;
@@ -42,6 +43,7 @@ z-index: 1;
   background-size:  cover;
   display: table;
   background-attachment: fixed;
+  z-index: -100
 
 }
 
@@ -53,6 +55,7 @@ z-index: 1;
   background-size:  cover;
   display: table;
   background-attachment: fixed;
+  z-index: -100
 }
 
 
@@ -63,6 +66,7 @@ z-index: 1;
   background-size:  cover;
   display: table;
   background-attachment: fixed;
+  z-index: -100
 }
 
 
@@ -73,6 +77,7 @@ z-index: 1;
   background-size:  cover;
   display: table;
   background-attachment: fixed;
+  z-index: -100
 }
 
 
@@ -83,6 +88,7 @@ z-index: 1;
   background-size:  cover;
   display: table;
   background-attachment: fixed;
+  z-index: -100
 }
 
 
