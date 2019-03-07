@@ -2,6 +2,18 @@
 
 <style>
 
+
+    /* font-family: 'Roboto', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Play', sans-serif; */
+
+
 * {
   box-sizing: border-box;
 }
@@ -215,31 +227,49 @@ padding:4px;
     display:grid;
     background:url("https://s3-us-west-2.amazonaws.com/factory-circuit-mont/static1.squarespace.jpg");
     width: 80%;
-    height: 500px;
-    grid-column-gap:160px;
-    grid-row-gap:33px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-size:cover;
+      max-width: 950px;
+      line-height: 1.3;
+     justify-content: center;
+    font-size:28pt;
+    font-family: 'Play', sans-serif; 
+    color:white;
+    height: 550px;
+    grid-gap:15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100px 
                         100px 
                         100px 
                         100px
+                        100px
  ;
   grid-template-areas:
-  " .  .  .  . "
-  " .  .  .  . "
-  " .  atv1  atv2 . "
-  ".  .  .  . " ;
+ " .  title title title  . "
+   " .  .  .  .  . "
+   " .  atv1 . atv2 . "
+  " .  .  .  . . "
+  " .  .  .  .  . " ;
+
+}
+.forest-title{
+grid-area: title;
+   align-self: center;
+  justify-self: center;
+
 
 }
 
 
 .atv1 {
      grid-area: atv1;
+     width:50px
+  
 }
 
 
 .atv2 {
      grid-area: atv2;
+    
 }
 
 /* Media Queries */
@@ -271,7 +301,7 @@ padding:4px;
 }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   body {
     background-color: yellowgreen;
     margin: 10px;
@@ -300,7 +330,62 @@ padding:4px;
   "footer     footer"
 }
 
+
+.forest{
+    display:grid;
+    background:url("https://s3-us-west-2.amazonaws.com/factory-circuit-mont/static1.squarespace.jpg");
+    width: 100%;
+     justify-content: center;
+    background-size:cover;
+    font-size:18pt;
+    font-family: 'Play', sans-serif; 
+    color:white;
+    height: 400px;
+    grid-column-gap:10px;
+    grid-row-gap:15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr
+                        1fr
+                        1fr
+                        1fr
+                        1fr
+ ;
+  grid-template-areas:
+  "  title title title  "
+  "  .  .  . "
+  " .  .  .  "
+   "  . atv1  . " 
+   " .  .  .  ";
+
 }
+.forest-title{
+grid-area: title;
+padding-top:20px;
+}
+
+
+.atv1 {
+     grid-area: atv1;
+    
+}
+
+
+
+}
+
+
+/* takes away second atv at 850px and under*/
+
+@media (max-width: 850px) {
+
+.atv2 {
+     grid-area: atv2;
+     display:none
+}
+
+}
+
+
 
 </style>
 
@@ -531,16 +616,21 @@ GRID 5
 <br>
 <br>
 <div class ='forest'>
-    <div class= "atv1" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-out-quart" data-aos-duration="1000" >
-    <%= image_tag "https://s3-us-west-2.amazonaws.com/factory-circuit-mont/2010.yamaha.grizzly550fi4x4eps.camo_.front-left.parked.on-trail_edited-1.png"%>
+    <div class = "forest-title" data-aos="fade-up">
+    Come play in our world!
     </div>
-    <div class= "atv2" data-aos="fade-left" data-aos-offset="350" data-aos-easing="ease-in-out-quart"data-aos-duration="1000" >
-    <%= image_tag "https://s3-us-west-2.amazonaws.com/factory-circuit-mont/atvright.png"%>
+    <div class= "atv1" data-aos="fade-right" data-aos-offset="80" data-aos-easing="ease-in-out-quart" data-aos-duration="1000" >
+    <img src= "https://s3-us-west-2.amazonaws.com/factory-circuit-mont/camogrizzlyright.png" style="width:225px">
+    </div>
+    <div class= "atv2" data-aos="fade-left" data-aos-offset="150" data-aos-easing="ease-in-out-quart"data-aos-duration="1000" >
+    <img src= "https://s3-us-west-2.amazonaws.com/factory-circuit-mont/wolverine+white_edited-1.png" style="width:325px" >
     </div>
 </div>
 
 
 <br>
+
+ 
 <br>
 <br>
 <br>
