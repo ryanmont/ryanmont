@@ -1,2 +1,657 @@
-<h1>Design#cssgrid</h1>
-<p>Find me in app/views/design/cssgrid.html.erb</p>
+
+<br>
+<br>
+
+<h1> CSS GRID</h1>
+
+<br>
+<br>
+GRID 1
+<br>
+<br>
+
+<div class= "grid1">
+  <div class="item item1">1</div>
+  <div class="item item2">2</div>
+  <div class="item item3">3</div>
+  <div class="item item4">4</div>
+  <div class="item item5">5</div>
+  <div class="item item6">6</div>
+  <div class="item item7">7</div>
+  <div class="item item8">8</div>
+  <div class="item item9">
+  <img src = 'https://media.istockphoto.com/photos/seascape-with-whale-tail-picture-id637901636' width="100%%">
+  </div>
+  <div class="item item10">10</div>
+
+</div>
+
+
+<br>
+<br>
+GRID 2
+<br>
+<br>
+
+<%# Grid 2 %>
+  
+
+<div class ="grid2">
+
+  <div class= "box1">
+  Hello
+  </div>
+
+  <div class = "box2">
+  There
+  </div>
+
+</div>
+
+<br>
+<br>
+GRID 3
+<br>
+<br>
+
+
+<%# Grid 3 %>
+
+<div class= "grid3">
+
+<div class = "a">
+</div fa-border>
+
+
+<div class = "b">
+</div fa-border>
+
+<div class = "c">
+</div fa-border>
+
+<div class = "d">
+</div fa-border>
+
+<div class = "e">
+</div fa-border>
+
+
+</div>
+
+
+<br>
+<br>
+GRID 4
+<br>
+<br>
+
+<div class= "grid4">
+  <div class= "g4a">
+  hello side bar 1
+  </div>
+
+
+ <div class= "g4b">
+  main content fixed area adasdfasd asdfsadfas  asdfsadf asdfsadf  asdfsadfa adfsadf asfsadfas sdfsadf 
+  </div>
+
+   <div class= "g4c">
+  sidebar
+  </div>
+
+   <div class= "g4d">
+  footer
+  </div>
+</div>
+
+
+<br>
+<br>
+GRID 5
+<br>
+<br>
+
+<div class= "grid5" data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-offset="100"
+                  data-aos-duration="1000">
+  
+
+
+ <div class= "g5content" data-aos="fade-right" data-aos-offset="270" data-aos-easing="ease-in-out-quart">
+  main content fixed area adasdfasd asdfsadfas  asdfsadf asdfsadf  asdfsadfa adfsadf asfsadfas sdfsadf 
+  </div>
+
+   <div class= "gsidebar-a  gr5item" data-aos="slide-right" data-aos-offset="270" data-aos-easing="ease-in-out-quart" >
+  sidebar a
+  </div>
+
+   <div class= "gsidebar-b gr5item" data-aos="fade-right" data-aos-offset="270" data-aos-easing="ease-in-out-quart" >
+  sidebar b
+  </div>
+
+   <div class= "gsidebar-c gr5item" data-aos="slide-left"  data-aos-offset="270" data-aos-easing="ease-in-out-quart" >
+  sidebar c
+  </div>
+
+   <div class= "gsidebar-d gr5item" data-aos="fade-right" data-aos-offset="270" data-aos-easing="ease-in-out-quart" >
+  sidebar d
+  </div>
+
+  <div class= "gsidebar-e gr5item" data-aos="fade-right" data-aos-offset="270" data-aos-easing="ease-in-out-quart" >
+  sidebar e
+  </div>
+
+   <div class= "g5footer" data-aos="fade-left" data-aos-offset="170" data-aos-easing="ease-in-out-quart">
+  footer
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+<%# styles %>
+
+
+<style>
+
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+  --pink: #EC549E;
+  --grey: #d3d3d3
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  font-size: 10px;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+ /*  background-image: url("./images/topography.svg"), */
+    /* linear-gradient(110deg, #f93d66, #6d47d9); */
+
+  /* background-image: linear-gradient(110deg, #f93d66, #6d47d9); */
+
+  background-color:var(--grey);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 30px;
+  /* background: white; */
+  background-attachment: fixed;
+  letter-spacing: -1px;
+}
+
+
+
+
+/* Grid 1 */
+
+.grid1{
+  display: grid;
+  grid-gap: 20px;
+  border: 4px solid var(--pink);
+  border-radius:6px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  font-size: 18px;
+  background-color: var(--yellow); /* best colour */
+  padding:3px;
+   border-radius:0px;
+}
+
+
+
+.item1{
+  grid-column: span 2;
+  grid-row: span 2;
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+
+.item2{
+  
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item3{
+
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item4{
+  
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item5{
+  grid-column: span 2;
+  /* background-color: var(--black); */
+  /* background-image: url("https://s3-us-west-2.amazonaws.com/factory-circuit-mont/raptor.png") ;
+  background-size :cover;
+  background-repeat:no-repeat;
+  color:var(--pink); */
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item6{
+ 
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item7{
+  grid-row: span 2;
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item8{
+  grid-column: span 2;
+
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+
+.item9{
+  grid-column: span 2;
+
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+.item10
+{
+  max-width:400px;
+  height:200px;
+  outline: 1px dotted grey;
+  border: 2px solid var(--pink)
+}
+
+/* Grid 2 */
+
+
+.grid2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  height:100px;
+
+}
+
+
+.box1{
+display:grid;
+background-color: var(--black);
+color:var(--pink);
+justify-content: center;
+align-items: center;
+padding:10px;
+
+}
+
+
+.box2{
+  display:grid;
+  background-color: var(--pink);
+  border-left:2px solid white;
+  color:white;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+
+}
+
+
+
+/* Grid 3 */
+
+
+.grid3{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 25px;
+
+}
+
+.a{
+height: 100px;
+background-color:pink;
+color:white;
+border: 2px solid white;
+display:grid;
+}
+
+.b{
+height: 100px;
+background-color:yellow;
+color:white;
+border: 2px solid white;
+display:grid;
+}
+
+.c{
+height: 100px;
+background-color:blue;
+color:white;
+border: 2px solid white;
+display:grid;
+}
+
+.d{
+height: 100px;
+background-color:green;
+color:white;
+border: 2px solid white;
+display:grid;
+}
+
+.e{
+
+height: 100px;
+background-color:red;
+color:white;
+border: 2px solid white;
+display:grid;
+}
+
+
+
+/* Grid 4 */
+
+
+.grid4{
+  display:grid;
+  justify-content: center;
+  grid-gap:20px;
+  font-size: 13pt;
+  color:white;
+  text-align: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 175px 175px 80px ;
+  grid-template-areas:
+  "sidebar1 content sidebar2"
+  "sidebar1 content sidebar2"
+  "footer footer footer"
+}
+
+
+
+.g4a{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: sidebar1;
+  border: 3px solid white;
+  border-radius: 6px;
+
+
+}
+
+.g4b{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: content;
+  border: 3px solid white;
+  border-radius: 6px;
+
+
+}
+.g4c{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: sidebar2;
+  border: 3px solid white;
+  border-radius: 6px;
+
+
+}
+.g4d{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: footer;
+  border: 3px solid white;
+  border-radius: 6px;
+
+}
+
+
+/* Grid 5 */
+
+
+.grid5{
+  display:grid;
+  justify-content: center;
+  grid-gap:20px;
+  font-size: 13pt;
+  color:white;
+  text-align: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 100px 100px 100px 100px 100px 80px ;
+  grid-template-areas:
+  "content content sidebar-a"
+  "content content sidebar-b"
+  "content content sidebar-c"
+  "content content sidebar-d"
+  "content content sidebar-e"
+  "footer footer footer"
+}
+
+
+.gr5item{
+  display:grid;
+  background:yellow;
+   padding:15px;
+  border: 3px solid white;
+  border-radius: 6px;
+
+
+}
+.g5content{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: content;
+  border: 3px solid white;
+  border-radius: 6px;
+}
+
+
+.gsidebar-a{
+  display:grid;
+  background:yellow;
+  grid-area: sidebar-a;
+}
+
+
+.gsidebar-b{
+  display:grid;
+  background:purple;
+  grid-area: sidebar-b;
+}
+
+
+.gsidebar-c{
+  display:grid;
+  background:brown;
+  grid-area: sidebar-c;
+}
+
+
+.gsidebar-d{
+  display:grid;
+  background:green;
+  grid-area: sidebar-d;
+}
+
+.gsidebar-e{
+    display:grid;
+  background:pink;
+  grid-area: sidebar-e;
+}
+
+
+
+.g5footer{
+  display:grid;
+  background:blue;
+   padding:15px;
+  grid-area: footer;
+  border: 3px solid white;
+  border-radius: 6px;
+
+}
+
+
+/* Media Queries */
+
+
+@media (max-width: 720px) {
+  body {
+    background-color: lightblue;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns: 1fr;
+
+}
+/* .grid3{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 2;
+  grid-gap: 25px;
+  height: 
+
+} */
+
+.grid4{
+  display:grid;
+  justify-content: center;
+  grid-gap:10px;
+  font-size: 11pt;
+  color:black;
+  text-align: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 175px 175px 60px ;
+  grid-template-areas:
+  "content   content   content"
+  "sidebar1  sidebar1  sidebar2"
+  "sidebar1  sidebar1   footer"
+}
+
+
+.grid5{
+  display:grid;
+  justify-content: center;
+  grid-gap:10px;
+  font-size: 11pt;
+  color:black;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 
+                      300px 
+                      90px  ;
+  grid-template-areas:
+  "content content content content content"
+  "sidebar-a  sidebar-b sidebar-c sidebar-d sidebar-e"
+  "footer footer footer footer footer"
+
+
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: yellowgreen;
+    margin: 10px;
+}
+
+.grid5{
+  display:grid;
+  justify-content: center;
+  grid-gap:10px;
+  font-size: 11pt;
+  color:white;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 
+                      350px 
+                      70px 
+                      70px
+                      70px
+                      70px
+                      70px
+                      50px ;
+  grid-template-areas:
+  "content   content"
+  "sidebar-a  sidebar-b" 
+  "sidebar-c  sidebar-d"
+  "sidebar-e  sidebar-e"
+  "footer     footer"
+
+
+
+}
+</style>

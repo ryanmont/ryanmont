@@ -30,6 +30,7 @@ class ContactsController < ApplicationController
       if @contact.save
 
         message = " '#{@contact.first}' has requested you to contact them, They're interested in a '#{@contact.model}' Call '#{@contact.phone}' "
+        
         TwilioTextMessenger.new(message).sales
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
         format.json { render :show, status: :created, location: @contact }
