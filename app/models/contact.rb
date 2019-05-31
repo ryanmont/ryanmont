@@ -1,9 +1,9 @@
 class Contact < ApplicationRecord
 
  before_save do |contact|
-    contact.last = contact.last.downcase.titleize
-    contact.first = contact.first.downcase.titleize
-    contact.model = contact.model.downcase.titleize
+    contact.last = contact.last.titleize
+    contact.first = contact.first.titleize
+    contact.model = contact.model.upcase
   end
 
  

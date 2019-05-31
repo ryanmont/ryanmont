@@ -17,8 +17,22 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @contact.phone %>
+  <%=  @contact.phone %>
+
 </p>
+
+
+<p>
+  <strong>Date:</strong>
+  <%= @contact.date %>
+</p>
+
+<p>
+  <strong> Created at:</strong>
+  <%=  @contact.created_at %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

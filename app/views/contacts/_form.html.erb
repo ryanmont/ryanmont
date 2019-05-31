@@ -16,14 +16,9 @@
     <%= form.text_field :first, id: :contact_first %>
   </div>
 
-<!--   <div class="field">
-    <%#= form.label :last %>
-    <%#= form.text_field :last, id: :contact_last %>
-  </div> -->
-
-    <div class="field">
+  <div class="field">
     <%= form.label :last %>
-    <%= form.text_field :last, :value => form.object.last&.titlecase %>
+    <%= form.text_field :last, id: :contact_last %>
   </div>
 
   <div class="field">
@@ -32,8 +27,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :contact_phone %>
+    <%= form.label :phone, "Phone" %>
+    <%= form.date_select :phone, id: :contact_phone, :order => [ :month, :day, :year], :start_year=>1950,:end_year=>2018 %>
+  </div> 
+
+  <div class="field">
+    <%= form.label :date, "Date" %>
+    <%= form.text_field :date, id: :contact_date %>
   </div>
 
   <div class="actions">

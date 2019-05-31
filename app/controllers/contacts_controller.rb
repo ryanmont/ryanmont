@@ -26,6 +26,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
+    # phone element used to test date
+    @contact.phone= Date.new params[:contact]['phone(1i)'].to_i, params[:contact]['phone(2i)'].to_i, params[:contact]['phone(3i)'].to_i
+    
+
+
     respond_to do |format|
       if @contact.save
 
@@ -73,6 +78,6 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:first, :last, :model, :phone)
+      params.require(:contact).permit(:first, :last, :model, :phone, :date)
     end
 end
