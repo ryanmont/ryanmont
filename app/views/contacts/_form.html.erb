@@ -16,9 +16,14 @@
     <%= form.text_field :first, id: :contact_first %>
   </div>
 
-  <div class="field">
+<!--   <div class="field">
+    <%#= form.label :last %>
+    <%#= form.text_field :last, id: :contact_last %>
+  </div> -->
+
+    <div class="field">
     <%= form.label :last %>
-    <%= form.text_field :last, id: :contact_last %>
+    <%= form.text_field :last, :value => form.object.last&.titlecase %>
   </div>
 
   <div class="field">

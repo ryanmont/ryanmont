@@ -39,7 +39,7 @@ class ContactsController < ApplicationController
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
-  end
+  end 
 
   # PATCH/PUT /contacts/1
   # PATCH/PUT /contacts/1.json
