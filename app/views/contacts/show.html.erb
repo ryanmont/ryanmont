@@ -28,11 +28,16 @@
 </p>
 
 <p>
-  <strong> Created at:</strong>
-  <%=  @contact.created_at %>
+  <strong> Date Input:</strong>
+  <%#=  @contact.created_at.in_time_zone("America/Denver") %>
+  <%= @contact.created_at.strftime("%m-%d-%Y") %>
 </p>
 
-
+<p>
+  <strong> Time Input:</strong>
+  <%#=  @contact.created_at.in_time_zone("America/Denver") %>
+  <%= @contact.created_at.strftime(" %T") %>
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
